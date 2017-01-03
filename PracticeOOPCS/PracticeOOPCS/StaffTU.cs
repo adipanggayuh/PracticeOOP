@@ -28,9 +28,6 @@ namespace PracticeOOPCS
 
         public void InputDataStaffTU()
         {
-            Console.WriteLine("===============================");
-            Console.WriteLine("==Selamat Datang di HR system==");
-            Console.WriteLine("===============================");
             Console.Write("Lanjutkan? (Y/N) :");
             string opsi = Console.ReadLine();
             if (opsi == "Y" || opsi == "y")
