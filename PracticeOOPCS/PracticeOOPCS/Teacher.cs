@@ -31,9 +31,6 @@ namespace PracticeOOPCS
 
         public void InputDataGuru()
         {
-            Console.WriteLine("===============================");
-            Console.WriteLine("==Selamat Datang di HR system==");
-            Console.WriteLine("===============================");
             Console.Write("Lanjutkan? (Y/N) :");
             string opsi = Console.ReadLine();
             if (opsi == "Y" || opsi == "y")
@@ -86,17 +83,7 @@ namespace PracticeOOPCS
             else if (pilihan == 4) { this.GetSalaryTahunanSemua(); }
             else if (pilihan == 5) { this.GetBonusTotal(); }
             else if (pilihan == 6) { this.GetId(); }
-            else
-            {
-                return;
-            }
-            Console.WriteLine("Lanjutkan? (Y/N) :");
-            string opsi = Console.ReadLine();
-            if (opsi == "Y" || opsi == "y")
-            {
-                DaftarAksi();
-            }
-            else if (opsi == "N" || opsi == "n")
+            else if (pilihan == 7)
             {
                 Environment.Exit(0);
             }
