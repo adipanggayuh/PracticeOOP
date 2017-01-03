@@ -10,8 +10,10 @@ namespace PracticeOOPCS
     {
         static void Main(string[] args)
         {
-            Teacher newteach = new Teacher();
-            newteach.InputDataGuru();
+            MainFunction main = new MainFunction();
+            main.CRUD();
+            //Teacher newteach = new Teacher();
+            //newteach.InputDataGuru();
             Console.ReadLine();
         }
     }
