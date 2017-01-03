@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticeOOPCS
 {
-    class Teacher : Employee
+    class Teacher : Employee, ISalary
     {
         private string ofClass;
         private string subject;
@@ -42,7 +42,7 @@ namespace PracticeOOPCS
             }
             else if (opsi == "N" || opsi == "n")
             {
-                return;
+                Environment.Exit(0);
             }
         }
 
@@ -65,6 +65,7 @@ namespace PracticeOOPCS
 
         private void DaftarAksi()
         {
+            Console.Clear();
             Console.WriteLine("====================");
             Console.WriteLine("======MAIN MENU=====");
             Console.WriteLine("====================");
@@ -97,7 +98,7 @@ namespace PracticeOOPCS
             }
             else if (opsi == "N" || opsi == "n")
             {
-                return;
+                Environment.Exit(0);
             }
 
         }
@@ -107,6 +108,7 @@ namespace PracticeOOPCS
             Teacher guru = new Teacher();
             int umur;
             int tahun;
+            Console.Clear();
             Console.WriteLine("** Input Informasi Guru **");
 
             Console.Write("Nama         : ");
