@@ -57,6 +57,7 @@ namespace PracticeOOPCS
                     Teacher newteach = new Teacher();
                     newteach.InputDataGuru();
                     Console.ReadLine();
+                    goto BACK;
                 }
                 else if (nomor == "2")
                 {
@@ -86,7 +87,9 @@ namespace PracticeOOPCS
             }
             else if (pilihan == 3)
             {
-
+                Console.WriteLine("====================");
+                Console.WriteLine("Under Constructions");
+                Console.WriteLine("====================");
             }
             else if (pilihan == 4)
             {

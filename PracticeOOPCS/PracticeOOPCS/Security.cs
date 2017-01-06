@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PracticeOOPCS
 {
-    class Security: Employee, ISalary
+    class Security : Employee, ISalary
     {
         List<Security> securitys = new List<Security>();
         public override long getSalary()
@@ -32,16 +32,16 @@ namespace PracticeOOPCS
         private void SetDataSecurity()
         {
             int jum;
-            Console.WriteLine("Masukkan Jumlah Staff TU: ");
+            Console.WriteLine("Masukkan Jumlah security : ");
             int.TryParse(Console.ReadLine(), out jum);
             for (int i = 1; i <= jum; i++)
             {
                 Console.WriteLine("===============");
-                Console.WriteLine("Staff No. " + i);
+                Console.WriteLine("security No. " + i);
 
-                Security staffinfo = InputSecurity();
+                Security securityinfo = InputSecurity();
 
-                securitys.Add(staffinfo);
+                securitys.Add(securityinfo);
 
             }
         }
@@ -52,9 +52,9 @@ namespace PracticeOOPCS
             Console.WriteLine("====================");
             Console.WriteLine("======MAIN MENU=====");
             Console.WriteLine("====================");
-            Console.WriteLine("1. Input daftar staff");
-            Console.WriteLine("2. Lihat daftar staff");
-            Console.WriteLine("3. Lihat Tahun Kerja Semua staff");
+            Console.WriteLine("1. Input daftar security");
+            Console.WriteLine("2. Lihat daftar security");
+            Console.WriteLine("3. Lihat Tahun Kerja Semua security");
             Console.WriteLine("4. Lihat Gaji Tahunan");
             Console.WriteLine("5. Lihat Bonus ");
             Console.WriteLine("6. Lihat Gaji perbulan ");
@@ -64,7 +64,7 @@ namespace PracticeOOPCS
             int pilihan;
             int.TryParse(Console.ReadLine(), out pilihan);
             if (pilihan == 1) { this.SetDataSecurity(); }
-            else if (pilihan == 2) { this.Getstaff(); }
+            else if (pilihan == 2) { this.Getsecurity(); }
             else if (pilihan == 3) { this.GetTahunKerjaSemua(); }
             else if (pilihan == 4) { this.GetSalaryTahunanSemua(); }
             else if (pilihan == 5) { this.GetBonusTotal(); }
@@ -88,31 +88,30 @@ namespace PracticeOOPCS
 
         public Security InputSecurity()
         {
-            Security staff = new Security();
+            Security security = new Security();
             int umur;
             int tahun;
             Console.Clear();
-            Console.WriteLine("** Input Informasi staff **");
+            Console.WriteLine("** Input Informasi security **");
 
             Console.Write("Nama         : ");
-            staff.name = Console.ReadLine();
+            security.name = Console.ReadLine();
             Console.Write("Id           : ");
-            staff.id = Console.ReadLine();
+            security.id = Console.ReadLine();
             Console.Write("Umur         : ");
             int.TryParse(Console.ReadLine(), out umur);
-            staff.age = umur;
+            security.age = umur;
             Console.Write("Tahun Bergabung  : ");
             int.TryParse(Console.ReadLine(), out tahun);
-            staff.yearJoined = tahun;
-            Console.Write("Mengajar di kelas    : ");
-            return staff;
+            security.yearJoined = tahun;
+            return security;
 
         }
 
-        public void Getstaff()
+        public void Getsecurity()
         {
             Console.WriteLine("===============");
-            Console.WriteLine("list staff: ");
+            Console.WriteLine("list security: ");
             if (securitys.Count == 0)
             {
                 Console.WriteLine("Tidak ada data");
@@ -131,7 +130,7 @@ namespace PracticeOOPCS
         public void GetTahunKerjaSemua()
         {
             Console.WriteLine("===============");
-            Console.WriteLine("Tahun bekerja staff: ");
+            Console.WriteLine("Tahun bekerja security: ");
             if (securitys.Count == 0)
             {
                 Console.WriteLine("Tidak ada data");
@@ -158,7 +157,7 @@ namespace PracticeOOPCS
         public void GetSalaryTahunanSemua()
         {
             Console.WriteLine("===============");
-            Console.WriteLine("Gaji setahun staff: ");
+            Console.WriteLine("Gaji setahun security: ");
             if (securitys.Count == 0)
             {
                 Console.WriteLine("Tidak ada data");
@@ -239,7 +238,7 @@ namespace PracticeOOPCS
                     if (opsi == "Y" || opsi == "y")
                     {
                         rec.setTotalAbsence();
-                        Console.WriteLine("Nama staff : " + rec.name);
+                        Console.WriteLine("Nama security : " + rec.name);
                         Console.WriteLine("Gaji Pokok: " + getSalary());
                         long totalSalary = rec.getTotalSalary();
                         Console.WriteLine("Gaji Aktual: " + totalSalary);
