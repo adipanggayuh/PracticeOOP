@@ -115,7 +115,6 @@ namespace PracticeOOPCS
             Console.Write("Tahun Bergabung  : ");
             int.TryParse(Console.ReadLine(), out tahun);
             staff.yearJoined = tahun;
-            Console.Write("Mengajar di kelas    : ");
             return staff;
 
         }
